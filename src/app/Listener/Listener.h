@@ -3,15 +3,17 @@
 
 #include "Button.h"
 #include "Controller.h"
+#include "ClockCheck.h"
 
 class Listener
 {
 private :
     Button *powerButton;
     Controller *controller;
+    ClockCheck *timeClock;
 
 public:
-    Listener(Button *button, Controller *control);
+    Listener(Button *button, Controller *control, ClockCheck *time);
     ~Listener();
     void checkEvent();
 };

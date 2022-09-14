@@ -3,10 +3,12 @@
 
 #include <string>
 #include "Led.h"
+#include "LCD.h"
 
 class View
 {
 private:
+    LCD *lcd;
     int lightState;
     Led *light1;
     Led *light2;
@@ -15,7 +17,7 @@ private:
     Led *light5;
 
 public:
-    View(Led *led1, Led *led2, Led *led3, Led *led4, Led *led5);
+    View(Led *led1, Led *led2, Led *led3, Led *led4, Led *led5, LCD *lcd);
     virtual ~View();
     void setState(int state);
     void lightView();
